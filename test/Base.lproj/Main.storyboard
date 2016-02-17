@@ -40,6 +40,9 @@
                                     <segment title="All"/>
                                     <segment title="Favorites"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchContacts:" destination="x4K-Uk-RG9" eventType="valueChanged" id="oqC-lO-K9x"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SNy-89-c7R">
                                 <rect key="frame" x="0.0" y="92" width="600" height="508"/>
@@ -52,7 +55,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATP-rt-hDJ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey person" translatesAutoresizingMaskIntoConstraints="NO" id="ATP-rt-hDJ">
                                                     <rect key="frame" x="8" y="12" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="BSo-s7-mtX"/>
@@ -66,6 +69,9 @@
                                                         <constraint firstAttribute="width" constant="30" id="xt6-Er-Zfn"/>
                                                     </constraints>
                                                     <state key="normal" title="FAV"/>
+                                                    <connections>
+                                                        <action selector="changeFavorited:" destination="x4K-Uk-RG9" eventType="touchDown" id="9tx-1s-fh3"/>
+                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-JQ-0Eu">
                                                     <rect key="frame" x="76" y="14" width="478" height="55"/>
@@ -110,6 +116,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="x4K-Uk-RG9" id="mOL-FQ-RA3"/>
+                                    <outlet property="delegate" destination="x4K-Uk-RG9" id="QiB-su-ZOt"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,4 +144,7 @@
             <point key="canvasLocation" x="1137" y="146"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grey person" width="99" height="94"/>
+    </resources>
 </document>

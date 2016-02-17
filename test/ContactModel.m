@@ -19,6 +19,8 @@
     self.name = @"";
     self.phoneNumber = @"";
     self.email = @"";
+    NSURL* placeholder = [NSURL URLWithString:@"http://bsccongress.com/im3/grey-silhouette-of-man2-clip-art.png"];
+    self.image = [[NSData alloc] initWithContentsOfURL:placeholder];
     return self;
 }
 
@@ -28,27 +30,41 @@
     self.favorite = favorite;
     self.phoneNumber = [self extractFirstPhoneNumber:contact];
     self.email = [self extractFirstEmail:contact];
+    NSData* image = [contact thumbnailImageData];
+    if (image != nil) {
+        self.image = image;
+        NSLog(@"Setting customed picture");
+    } else {
+        NSLog(@"Setting placeholder picture");
+        NSURL* placeholder = [NSURL URLWithString:@"http://bsccongress.com/im3/grey-silhouette-of-man2-clip-art.png"];
+        self.image = [[NSData alloc] initWithContentsOfURL:placeholder];
+    }
     return self;
 }
 
 - (NSString*) extractFirstPhoneNumber:(CNContact*)contact {
-    NSString *phoneNumber = @"";
-    if (contact.phoneNumbers.firstObject == nil){
-        printf("No phone number found");
+    NSArray* phoneNumbers = [contact phoneNumbers];
+    
+    if (phoneNumbers.firstObject != nil) {
+        CNLabeledValue* firstPhoneNumber = phoneNumbers.firstObject;
+        CNPhoneNumber* phone = [firstPhoneNumber value];
+        NSString* phoneNumber = [phone stringValue];
+        return phoneNumber;
     } else {
-        phoneNumber = contact.phoneNumbers.firstObject.value.stringValue;
+        return @"";
     }
-    return phoneNumber;
 }
 
 - (NSString*) extractFirstEmail:(CNContact*)contact {
-    NSString *email = @"";
-    if (contact.emailAddresses.firstObject == nil){
-        printf("No email address found");
-    } else {
-        email = contact.emailAddresses.firstObject.value;
+    NSArray* emailAddresses = [contact emailAddresses];
+    if (emailAddresses.firstObject != nil) {
+        CNLabeledValue* email = [emailAddresses firstObject];
+        NSString* emailAddress = [email value];
+        return emailAddress;
     }
-    return email;
+    else {
+        return @"";
+    }
 }
 
 @end

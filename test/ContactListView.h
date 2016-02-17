@@ -12,8 +12,8 @@
 
 @interface ContactListView : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property NSMutableArray* contacts;
-@property NSMutableArray* favorites;
+@property NSMutableArray<ContactModel *> * contacts;
+@property NSMutableArray<ContactModel *> * favorites;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *contactTableView;

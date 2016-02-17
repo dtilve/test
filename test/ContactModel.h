@@ -11,7 +11,8 @@
 
 @interface ContactModel : NSObject
 
-@property BOOL favorite;
+@property (readwrite) BOOL favorite;
+@property int position;
 @property NSString* identifier;
 @property NSString* name;
 @property NSString* phoneNumber;

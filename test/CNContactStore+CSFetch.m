@@ -11,12 +11,13 @@
 @implementation CNContactStore (CSFetch)
 
     -(NSMutableArray*) fetchContacts:(CNContactFetchRequest*)request {
-        NSMutableArray* contacts = [NSMutableArray alloc];
+        NSLog(@"fetching contacts");
+        NSMutableArray* contacts = [[NSMutableArray alloc] init];
         NSError* error = [NSError alloc];
         
         void (^addContact)(CNContact*, BOOL*) = ^(CNContact* contact, BOOL* stop) {
             [contacts addObject:contact];
-            printf("contact fetched");
+            NSLog(@"contact %@ fetched", [contact givenName]);
         };
         
         [self enumerateContactsWithFetchRequest:request error:&error usingBlock:addContact];
