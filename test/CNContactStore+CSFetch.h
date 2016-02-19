@@ -7,9 +7,10 @@
 //
 
 #import <Contacts/Contacts.h>
+@import ReactiveCocoa;
 
 @interface CNContactStore (CSFetch)
 
-    - (NSMutableArray*) fetchContacts:(CNContactFetchRequest*)request;
+    - (RACSignal*) fetchContacts:(CNContactFetchRequest*) request;
 
 @end

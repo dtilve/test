@@ -10,8 +10,9 @@
 
 @implementation CNContactStore (CSFetch)
 
-    -(NSMutableArray*) fetchContacts:(CNContactFetchRequest*)request {
+    - (RACSignal*) fetchContacts:(CNContactFetchRequest*)request {
         NSLog(@"fetching contacts");
+        
         NSMutableArray* contacts = [[NSMutableArray alloc] init];
         NSError* error = [NSError alloc];
         
@@ -21,8 +22,17 @@
         };
         
         [self enumerateContactsWithFetchRequest:request error:&error usingBlock:addContact];
-        
-        return contacts;
+     
+        return [RACSignal return:contacts];
     }
 
+
 @end
+
+/*
+ @weakify(self)
+ [_phoneBookAddress.contactsChanged subscribeNext:^(id x) {
+ @strongify(self)
+ [self.contactTableView reloadData];
+ }];
+ */

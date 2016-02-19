@@ -8,6 +8,15 @@
 
 #import "ContactListView.h"
 #import "CNContactStore+CSFetch.h"
+#import "ContactTableViewModel.h"
+#import "PhoneBookAddress.h"
+#import "ContactStore.h"
+
+@interface ContactListView ()
+
+@property(nonatomic, readonly) ContactTableViewModel * tableViewModel;
+
+@end
 
 @implementation ContactListView
 
@@ -15,33 +24,13 @@
         [super viewDidLoad];
         NSLog(@"viewDidLoad");
         
-        CNContactStore* contactStore = [[CNContactStore alloc] init];
-        CNContactFetchRequest* request = [CNContactFetchRequest alloc];
-        NSArray* keys = [NSArray alloc];
-        keys = @[CNContactEmailAddressesKey,
-                 CNContactPhoneNumbersKey,
-                 CNContactGivenNameKey,
-                 CNContactFamilyNameKey,
-                 CNContactMiddleNameKey,
-                 CNContactThumbnailImageDataKey];
-        NSLog(@"Count for keys: %lu", (unsigned long)[keys count]);
-        request = [request initWithKeysToFetch:keys];
-        NSLog(@"Keys for request: %@", [request keysToFetch]);
-        NSArray <CNContact *> * allContacts = [contactStore fetchContacts:request];
-        NSMutableArray<ContactModel*> * contacts = [[NSMutableArray alloc] init];
-        self.favorites = [[NSMutableArray alloc] init];
-        for (int i = 0; i < allContacts.count; i++) {
-            ContactModel* b = [[ContactModel alloc] initWithFavorite:false fromContact:allContacts[i]];
-            b.position = i;
-            NSLog(@"Adding contact");
-            [contacts addObject:b];
-        }
-
-        self.contacts = contacts;
-        NSLog(@"%lu contacts found in total",(unsigned long)[self.contacts count]);
-        [[self contactTableView] reloadData];
-    
+        _tableViewModel = [ContactTableViewModel init];
+        
+        [self.contactTableView reloadData];
+        
+         
     }
+
 
     - (IBAction)changeFavorited:(id)sender {
         NSLog(@"Button has been pressed");
@@ -69,6 +58,7 @@
     }
 
 
+// TABLEVIEW METHODS
 
     - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
         return 1;
@@ -112,3 +102,5 @@
     }
 
 @end
+
+

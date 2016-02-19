@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6107F7E31C6E6F37008AA976 /* CNContactStore+CSFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6107F7E21C6E6F37008AA976 /* CNContactStore+CSFetch.m */; };
+		611232511C761EFA00C16084 /* ContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 611232501C761EFA00C16084 /* ContactStore.m */; };
+		611232691C7644BA00C16084 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611232671C7644BA00C16084 /* ReactiveCocoa.framework */; };
+		6112326A1C7644BA00C16084 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 611232671C7644BA00C16084 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6112326B1C7644BA00C16084 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611232681C7644BA00C16084 /* Result.framework */; };
+		6112326C1C7644BA00C16084 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 611232681C7644BA00C16084 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		612DED9F1C74D4A700648F23 /* ContactTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 612DED9E1C74D4A700648F23 /* ContactTableViewModel.m */; };
 		615B5C8A1C6E24F400ADC5D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B5C891C6E24F400ADC5D2 /* main.m */; };
 		615B5C8D1C6E24F400ADC5D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B5C8C1C6E24F400ADC5D2 /* AppDelegate.m */; };
 		615B5C931C6E24F400ADC5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615B5C911C6E24F400ADC5D2 /* Main.storyboard */; };
@@ -17,11 +23,33 @@
 		615B5CB01C6E3E3F00ADC5D2 /* ContactListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B5CAF1C6E3E3F00ADC5D2 /* ContactListView.m */; };
 		615B5CB31C6E474C00ADC5D2 /* ContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B5CB21C6E474C00ADC5D2 /* ContactView.m */; };
 		61D6039B1C739DED00C5F4C6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61D6039A1C739DED00C5F4C6 /* Media.xcassets */; };
+		61F2E3821C74F577004FF5FF /* PhoneBookAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F2E3811C74F577004FF5FF /* PhoneBookAddress.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		611232661C76423C00C16084 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6112326A1C7644BA00C16084 /* ReactiveCocoa.framework in Embed Frameworks */,
+				6112326C1C7644BA00C16084 /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6107F7E11C6E6F37008AA976 /* CNContactStore+CSFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNContactStore+CSFetch.h"; sourceTree = "<group>"; };
 		6107F7E21C6E6F37008AA976 /* CNContactStore+CSFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNContactStore+CSFetch.m"; sourceTree = "<group>"; };
+		6112324F1C761EFA00C16084 /* ContactStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactStore.h; sourceTree = "<group>"; };
+		611232501C761EFA00C16084 /* ContactStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactStore.m; sourceTree = "<group>"; };
+		611232671C7644BA00C16084 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = test/Frameworks/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		611232681C7644BA00C16084 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = test/Frameworks/Result.framework; sourceTree = "<group>"; };
+		612DED9D1C74D4A700648F23 /* ContactTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewModel.h; sourceTree = "<group>"; };
+		612DED9E1C74D4A700648F23 /* ContactTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewModel.m; sourceTree = "<group>"; };
 		615B5C851C6E24F400ADC5D2 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		615B5C891C6E24F400ADC5D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		615B5C8B1C6E24F400ADC5D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +65,8 @@
 		615B5CB11C6E474C00ADC5D2 /* ContactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactView.h; path = ../ContactView.h; sourceTree = "<group>"; };
 		615B5CB21C6E474C00ADC5D2 /* ContactView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactView.m; path = ../ContactView.m; sourceTree = "<group>"; };
 		61D6039A1C739DED00C5F4C6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		61F2E3801C74F577004FF5FF /* PhoneBookAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookAddress.h; sourceTree = "<group>"; };
+		61F2E3811C74F577004FF5FF /* PhoneBookAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookAddress.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,15 +74,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611232691C7644BA00C16084 /* ReactiveCocoa.framework in Frameworks */,
+				6112326B1C7644BA00C16084 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		611232521C7625A300C16084 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6107F7E11C6E6F37008AA976 /* CNContactStore+CSFetch.h */,
+				6107F7E21C6E6F37008AA976 /* CNContactStore+CSFetch.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		612DEDA01C74D4AE00648F23 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				612DED9D1C74D4A700648F23 /* ContactTableViewModel.h */,
+				612DED9E1C74D4A700648F23 /* ContactTableViewModel.m */,
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
 		615B5C7C1C6E24F400ADC5D2 = {
 			isa = PBXGroup;
 			children = (
+				611232671C7644BA00C16084 /* ReactiveCocoa.framework */,
+				611232681C7644BA00C16084 /* Result.framework */,
 				615B5C871C6E24F400ADC5D2 /* test */,
 				615B5C861C6E24F400ADC5D2 /* Products */,
 			);
@@ -72,8 +124,10 @@
 				61D6039A1C739DED00C5F4C6 /* Media.xcassets */,
 				615B5C8B1C6E24F400ADC5D2 /* AppDelegate.h */,
 				615B5C8C1C6E24F400ADC5D2 /* AppDelegate.m */,
-				615B5CAD1C6E3D3C00ADC5D2 /* View */,
+				611232521C7625A300C16084 /* Extensions */,
 				615B5CA61C6E294600ADC5D2 /* Services */,
+				615B5CAD1C6E3D3C00ADC5D2 /* View */,
+				612DEDA01C74D4AE00648F23 /* View Model */,
 				615B5CA21C6E282100ADC5D2 /* Model */,
 				615B5C911C6E24F400ADC5D2 /* Main.storyboard */,
 				615B5C941C6E24F400ADC5D2 /* Assets.xcassets */,
@@ -104,8 +158,10 @@
 		615B5CA61C6E294600ADC5D2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6107F7E11C6E6F37008AA976 /* CNContactStore+CSFetch.h */,
-				6107F7E21C6E6F37008AA976 /* CNContactStore+CSFetch.m */,
+				61F2E3801C74F577004FF5FF /* PhoneBookAddress.h */,
+				61F2E3811C74F577004FF5FF /* PhoneBookAddress.m */,
+				6112324F1C761EFA00C16084 /* ContactStore.h */,
+				611232501C761EFA00C16084 /* ContactStore.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -131,6 +187,8 @@
 				615B5C811C6E24F400ADC5D2 /* Sources */,
 				615B5C821C6E24F400ADC5D2 /* Frameworks */,
 				615B5C831C6E24F400ADC5D2 /* Resources */,
+				611232661C76423C00C16084 /* Embed Frameworks */,
+				61F2E37B1C74DCE1004FF5FF /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -187,17 +245,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61F2E37B1C74DCE1004FF5FF /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		615B5C811C6E24F400ADC5D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61F2E3821C74F577004FF5FF /* PhoneBookAddress.m in Sources */,
 				615B5CA11C6E26A200ADC5D2 /* ContactModel.m in Sources */,
 				615B5C8D1C6E24F400ADC5D2 /* AppDelegate.m in Sources */,
 				6107F7E31C6E6F37008AA976 /* CNContactStore+CSFetch.m in Sources */,
 				615B5CB01C6E3E3F00ADC5D2 /* ContactListView.m in Sources */,
+				612DED9F1C74D4A700648F23 /* ContactTableViewModel.m in Sources */,
 				615B5CB31C6E474C00ADC5D2 /* ContactView.m in Sources */,
 				615B5C8A1C6E24F400ADC5D2 /* main.m in Sources */,
+				611232511C761EFA00C16084 /* ContactStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +320,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -283,6 +364,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -307,6 +389,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/test",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/test/Frameworks",
+				);
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtilve.test;
@@ -318,6 +408,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/test",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/test/Frameworks",
+				);
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtilve.test;
